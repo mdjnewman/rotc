@@ -21,7 +21,7 @@ Nginx Ingress defaults comes with a global ingress shared across all namespaces 
 The external IP of the Ingress can be found with:
 
 ```console
-kubectl get service nginx-ingress-controller -n nginx-ingress
+kubectl get service -n nginx-ingress
 ```
 
 If the nginx controller is installed successfully, the external IP should respond 200 on `/healthz` and 404 on `/`.
@@ -50,9 +50,9 @@ kubectl apply -f ingress-v1-domain.yaml
 
 The ingress definition has a `host` which is mapped to a domain name.
 
-The hosted zone of this domain includes a DNS A record on `dockercoins-v1.wigarcia.com` with the ingress IP as its value.
+The hosted zone of this domain includes a DNS A record on `dockercoins.wigarcia.com` with the ingress IP as its value.
 
-As a consequence, the DNS resolution of <http://dockercoins-v1.wigarcia.com> works and through the ingress resource, the dockercoins service can also now be reached.
+As a consequence, the DNS resolution of <http://dockercoins.wigarcia.com> works and through the ingress resource, the dockercoins service can also now be reached.
 
 ### Nginx ingress controller, one domain name, two services
 

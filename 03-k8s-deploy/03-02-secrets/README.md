@@ -40,7 +40,8 @@ The output should be similar to this:
 helloWorld42+
 ```
 ## Secrets are encoded, but not encrypted
-It is  important to note that secrets are not encrypted by default (they are only encoded)
+
+It is important to note that secrets are not encrypted by default (they are only encoded)
 
 Display the contents of the secret we have just created
 ```output
