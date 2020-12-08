@@ -47,7 +47,7 @@ Sample app from Jérôme Petazzoni - code under [Apache License 2.0](https://git
       * [Docker Compose Limitations](./01-docker/02-compose/README.md#docker-compose-limitations)
       * [Cleanup](./01-docker/02-compose/README.md#cleanup)
 
-   * [02-01 Kubectl](./02-k8s/02-01-kubectl/README.md#02-01-kubectl)
+   * [02-01 kubectl](./02-k8s/02-01-kubectl/README.md#02-01-kubectl)
       * [Setup](./02-k8s/02-01-kubectl/README.md#setup)
          * [GCP](./02-k8s/02-01-kubectl/README.md#gcp)
          * [Azure](./02-k8s/02-01-kubectl/README.md#azure)
@@ -79,16 +79,15 @@ Sample app from Jérôme Petazzoni - code under [Apache License 2.0](https://git
       * [Delete the replicaset](./02-k8s/02-04-replicaset/README.md#delete-the-replicaset)
 
    * [02-05-01 Kubernetes Deployment and Service](./02-k8s/02-05-deployment-svc/01-README.md#02-05-01-kubernetes-deployment-and-service)
-      * [Pre-requisites](./02-k8s/02-05-deployment-svc/01-README.md#pre-requisites)
-         * [kubectl](./02-k8s/02-05-deployment-svc/01-README.md#kubectl)
-         * [Kubernetes cluster](./02-k8s/02-05-deployment-svc/01-README.md#kubernetes-cluster)
-      * [Create a namespace](./02-k8s/02-05-deployment-svc/01-README.md#create-a-namespace)
+      * [Prerequisites](./02-k8s/02-05-deployment-svc/01-README.md#prerequisites)
+      * [Creating and using a namespace (if required)](./02-k8s/02-05-deployment-svc/01-README.md#creating-and-using-a-namespace-if-required)
 
    * [02-05-02 Kubernetes Deployment and Service](./02-k8s/02-05-deployment-svc/02-README.md#02-05-02-kubernetes-deployment-and-service)
       * [Create a deployment](./02-k8s/02-05-deployment-svc/02-README.md#create-a-deployment)
 
    * [02-05-03 Kubernetes Deployment and Service](./02-k8s/02-05-deployment-svc/03-README.md#02-05-03-kubernetes-deployment-and-service)
       * [External access to the pod - how to create a basic service](./02-k8s/02-05-deployment-svc/03-README.md#external-access-to-the-pod---how-to-create-a-basic-service)
+      * [Clean up](./02-k8s/02-05-deployment-svc/03-README.md#clean-up)
 
    * [03-01 Kubernetes ConfigMaps](./03-k8s-deploy/03-01-configs/README.md#03-01-kubernetes-configmaps)
       * [Start](./03-k8s-deploy/03-01-configs/README.md#start)
