@@ -16,7 +16,7 @@ Run `cd exercise/` and follow the instructions below to get started!
 Instrumentation is a term that refers to:
 
 * adding application logic, generally using a client library
-* that will expose application metrics, typicall user-defined metrics, performance metrics that will help to diagnose or trace tivity.
+* that will expose application metrics, typical user-defined metrics and performance metrics that will help to diagnose or trace activity.
 
 ### Adding metrics to a NodeJS application
 
@@ -81,22 +81,7 @@ spec:
         prometheus.io/path: 'swagger-stats/metrics'
     spec:
       containers:
-      - name: rng
-        image: rotcaus/dockercoins_rng:v1
-        imagePullPolicy: Always
-      - name: hasher
-        image: rotcaus/dockercoins_hasher:v1
-        imagePullPolicy: Always
-      - name: webui
-        image: rotcaus/dockercoins_webui:v3
-        imagePullPolicy: Always
-        ports:
-        - containerPort: 80
-      - name: worker
-        image: rotcaus/dockercoins_worker:v1
-        imagePullPolicy: Always
-      - name: redis
-        image: redis
+      - # ...
 ```
 
 Prometheus leverages the Kubernetes APIs to dynamically detects pods that expose metrics based on the presence of the `prometheus.io/*` annotations.
@@ -164,7 +149,7 @@ Now that our application metrics are stored in Prometheus, we can use Grafana to
 Start the grafana web ui with:
 
 ```console
-kubectl -n istio-system port-forward $(kubectl -n istio-system get pod -l app=grafana -o jsonpath='{.items[0].metadata.name}') 3000:3000
+kubectl -n grafana port-forward $(kubectl -n grafana get pod -l app.kubernetes.io/name=grafana -o jsonpath='{.items[0].metadata.name}') 3000:3000
 ```
 
 The dashboard should now be accessible at <http://localhost:3000>.
