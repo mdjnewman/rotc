@@ -59,7 +59,7 @@ To get familiar with the Helm CLI, we are going to install the `metabase` applic
 We first need to add the official Helm chart repository to our list of available repositories:
 
 ```console
-helm repo add stable https://kubernetes-charts.storage.googleapis.com
+helm repo add stable https://charts.helm.sh/stable
 ```
 
 Let's search for it in the public stable chart repository with:
@@ -96,10 +96,12 @@ Let's install the metabase chart. Each unique installation of a Helm chart is id
 ```console
 # Windows only
 $env:NAMESPACE="[username-placeholder]" # should be the same as what you used in exercise 03-01
+kubectl config set-context --current --namespace=$NAMESPACE
 $env:RELEASE_NAME=$env:NAMESPACE + "-metabase"
 
 # MacOS only
 export NAMESPACE=[username-placeholder] # should be the same as what you used in exercise 03-01
+kubectl config set-context --current --namespace=$NAMESPACE
 export RELEASE_NAME="$NAMESPACE-metabase"
 ```
 
@@ -324,7 +326,8 @@ The output should be similar to this:
 
 ```console
 NAME                    CHART VERSION   APP VERSION     DESCRIPTION                
-rotcaus/dockercoins     0.1.0           1.0             A Helm chart for Kubernetes```
+rotcaus/dockercoins     0.1.0           1.0             A Helm chart for Kubernetes
+```
 
 Inspect the chart to show its metadata and the possible values that can be configured on it:
 
@@ -355,11 +358,7 @@ This may take a few moments.
 Once the chart is installed, you should be able to access it by its public IP. Allow some time for the service to be allocated a public IP, use the watch mode `-w` to following the change from "no IP" to "a public IP is assigned to the Kubernetes service":
 
 ```console
-# Windows only
-kubectl get svc -w
-
-# MacOS only
-kubectl get svc -w
+kubectl get svc --watch
 ```
 
 Once the column IP goes from pending to an available IP, do `Ctrl+C` and access the app with:
@@ -462,10 +461,10 @@ After the deployment has completed, the version from the API should go from vers
 
 ```console
 # Windows only
-helm delete --purge $env:RELEASE_NAME
+helm delete $env:RELEASE_NAME
 kubectl delete all --all -n "$env:NAMESPACE"
 
 # MacOS only
-helm delete --purge $RELEASE_NAME
+helm delete $RELEASE_NAME
 kubectl delete all --all -n "${NAMESPACE}"
 ```
