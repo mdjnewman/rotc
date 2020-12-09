@@ -1,5 +1,7 @@
 # Rise of the Containers workshop
 
+See [Prerequisites](./prerequisites.md) for tools that are required for the workshop.
+
 ## Structure
 
 * `exercise/`: exercise - attendees
