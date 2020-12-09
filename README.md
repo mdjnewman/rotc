@@ -1,4 +1,6 @@
-# Structure
+# Rise of the Containers workshop
+
+## Structure
 
 * `exercise/`: exercise - attendees
 * `solution/`: exercise's solution, solution scripts - attendees
@@ -7,7 +9,7 @@
 
 [Build tasks to provision Kubernetes in AWS/GCP/Azure](./.build/README.md)
 
-# References
+## References
 
 * `docker` CLI reference: <https://docs.docker.com/engine/reference/commandline/docker/>
 * `docker-compose` CLI reference: <https://docs.docker.com/compose/reference/>
@@ -16,7 +18,7 @@
 
 Sample app from Jérôme Petazzoni - code under [Apache License 2.0](https://github.com/jpetazzo/container.training/blob/master/LICENSE)
 
-# Table of contents
+## Table of contents
 
    * [01-01-01 Docker](./01-docker/01-docker/EXERCISE-01.md#01-01-01-docker)
       * [Start](./01-docker/01-docker/EXERCISE-01.md#start)
