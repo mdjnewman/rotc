@@ -40,7 +40,7 @@ The expected output should be similar to this:
 
 ```output
 # ==> Outputs:
-twkoins_webui                                                    latest               34d55f835d15        31 minutes ago      218MB
+twkoins_webui                        latest               34d55f835d15        31 minutes ago      218MB
 rotcaus/twkoins_webui                trainers             34d55f835d15        31 minutes ago      218MB
 ```
 
