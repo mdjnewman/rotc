@@ -59,7 +59,7 @@ Docker HUB
 - Use the `rotcaus` Docker Hub account to login:
 
   ```bash
-  gcloud secrets versions access --project $PROJECT --secret RotC-docker-hub 1 | docker login --username rotcaus --password-stdin
+  gcloud secrets versions access --project rotcaus --secret rotcaus-docker-hub 1 | docker login --username rotcaus --password-stdin
   ```
 
 ### Publish the Docker image
