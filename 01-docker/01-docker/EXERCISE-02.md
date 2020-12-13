@@ -9,7 +9,7 @@ Publishing is done via the `docker push` command. However, if you were to use th
 ### Tag the Docker images
 
 To let Docker know you want to publish to our own registry, you need to _tag_ the image with the registry server location (_address:port_).
-The Docker registry used for this workshop is `rotcaus/dockerfundamentals` (Docker Hub).
+The Docker repository used for this test application is `rotcaus/twkoins_webui` (on the public Docker Hub registry).
 
 When tagging an image, a recommended practice is to add a version to the tag name.
 From now on, we will use the **team name** as the version to tag all our Docker images.
@@ -56,11 +56,10 @@ Docker HUB
   docker logout
   ```
 
-- Use the rotcaus Docker account to login:
+- Use the `rotcaus` Docker Hub account to login:
 
   ```bash
-  # You'll be prompted for a password
-  docker login --username rotcaus
+  gcloud secrets versions access --project $PROJECT --secret RotC-docker-hub 1 | docker login --username rotcaus --password-stdin
   ```
 
 ### Publish the Docker image
