@@ -56,10 +56,11 @@ Docker HUB
   docker logout
   ```
 
-- Use the `rotcaus` Docker Hub account to login:
+- Use the rotcaus Docker account to login:
 
   ```bash
-  gcloud secrets versions access --project rotcaus --secret rotcaus-docker-hub 1 | docker login --username rotcaus --password-stdin
+  # You'll be prompted for a password
+  docker login --username rotcaus
   ```
 
 ### Publish the Docker image
