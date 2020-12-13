@@ -26,7 +26,7 @@ docker tag twkoins_webui rotcaus/twkoins_webui:$env:TEAM_NAME
 If you are on MacOS:
 
 ```console
-export TEAM_NAME="joe"
+export TEAM_NAME="[team-name-placeholder]"
 docker tag twkoins_webui rotcaus/twkoins_webui:${TEAM_NAME}
 ```
 
