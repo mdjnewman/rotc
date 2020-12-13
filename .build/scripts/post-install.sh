@@ -4,7 +4,7 @@ set -euo pipefail
 
 # Build and push v2 image of webui (earlier versions are done as part of setup for 02-02
 DOCKER_REPO=rotcaus
-cd ../04-observability/04-01-prometheus/exercise/dockercoins-prom
+cd ../04-observability/04-01-prometheus/solution/dockercoins-prom
 docker build . -t ${DOCKER_REPO}/dockercoins_webui:v2
 docker push ${DOCKER_REPO}/dockercoins_webui:v2
 cd -

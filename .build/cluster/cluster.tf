@@ -63,11 +63,11 @@ resource "google_container_cluster" "cluster" {
   addons_config {
 
     istio_config {
-      disabled = false
+      disabled = true
     }
 
     cloudrun_config {
-      disabled = false
+      disabled = true
     }
   }
 

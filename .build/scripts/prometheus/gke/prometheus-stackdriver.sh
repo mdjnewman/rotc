@@ -21,11 +21,11 @@ if [  $# -le 1 ]; then
 fi
 
 
-# kubectl apply -f clusterRole.yml
+kubectl apply -f clusterRole.yml
 
-# kubectl apply -f configMap.yml -n "${KUBE_NAMESPACE}"
+kubectl apply -f configMap.yml -n "${KUBE_NAMESPACE}"
 
-# kubectl apply -f prometheus-deployment.yml -n "${KUBE_NAMESPACE}"
+kubectl apply -f prometheus-deployment.yml -n "${KUBE_NAMESPACE}"
 
 # Override to use a different Docker image name for the sidecar.
 export SIDECAR_IMAGE_NAME=${SIDECAR_IMAGE_NAME:-'gcr.io/stackdriver-prometheus/stackdriver-prometheus-sidecar'}
