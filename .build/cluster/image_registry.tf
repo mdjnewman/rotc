@@ -9,7 +9,7 @@ resource "null_resource" "docker-registry" {
   provisioner "local-exec" {
     command = <<EOF
       docker-credential-gcr configure-docker && \
-      (echo 'FROM scratch'; echo 'LABEL maintainer=binx.io') | \
+      (echo 'FROM alpine') | \
       docker build -t gcr.io/${data.google_client_config.current.project}/scratch:latest - && \
       docker push gcr.io/${data.google_client_config.current.project}/scratch:latest
 EOF
