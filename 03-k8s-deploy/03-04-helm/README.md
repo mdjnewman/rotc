@@ -132,12 +132,12 @@ Wait for the chart to be installed and follow the instructions in the NOTES:
 
 ```console
 # Windows only
-export POD_NAME=$(kubectl get pods --namespace will -l "app=metabase,release=v1-metabase" -o jsonpath="{.items[0].metadata.name}")
+export POD_NAME=$(kubectl get pods --namespace ... -l "app=metabase,release=v1-metabase" -o jsonpath="{.items[0].metadata.name}")
 echo "Visit http://127.0.0.1:8080 to use your application"
 kubectl port-forward --namespace $env:NAMESPACE $POD_NAME 8080:3000
 
 # MacOS only
-export POD_NAME=$(kubectl get pods --namespace will -l "app=metabase,release=v1-metabase" -o jsonpath="{.items[0].metadata.name}")
+export POD_NAME=$(kubectl get pods --namespace ... -l "app=metabase,release=v1-metabase" -o jsonpath="{.items[0].metadata.name}")
 echo "Visit http://127.0.0.1:8080 to use your application"
 kubectl port-forward --namespace ${NAMESPACE} $POD_NAME 8080:3000
 ```

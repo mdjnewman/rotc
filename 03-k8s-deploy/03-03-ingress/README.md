@@ -50,9 +50,9 @@ kubectl apply -f ingress-v1-domain.yaml
 
 The ingress definition has a `host` which is mapped to a domain name.
 
-The hosted zone of this domain includes a DNS A record on `dockercoins.wigarcia.com` with the ingress IP as its value.
+The hosted zone of this domain includes a DNS A record on `rotc.mdjnewman.me` with the ingress IP as its value.
 
-As a consequence, the DNS resolution of <http://dockercoins.wigarcia.com> works and through the ingress resource, the dockercoins service can also now be reached.
+As a consequence, the DNS resolution of <http://rotc.mdjnewman.me> works and through the ingress resource, the dockercoins service can also now be reached.
 
 ### Nginx ingress controller, one domain name, two services
 
@@ -64,8 +64,8 @@ kubectl apply -f ingress-v1-v2.yaml
 
 With the presence of 2 backends in the list of HTTP paths:
 
-* the service `simpleapp` is available at <http://dockercoins.wigarcia.com/v1>
-* the service `dockercoins` is available at <http://dockercoins.wigarcia.com/v2/index.html>
+* the service `simpleapp` is available at <http://rotc.mdjnewman.me/v1>
+* the service `dockercoins` is available at <http://rotc.mdjnewman.me/v2/index.html>
 
 The 2 services are unrelated and run in separate pods. In a real world scenarion, this could be used to expose:
 

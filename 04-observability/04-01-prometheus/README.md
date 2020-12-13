@@ -152,9 +152,9 @@ Start the grafana web ui with:
 kubectl -n grafana port-forward $(kubectl -n grafana get pod -l app.kubernetes.io/name=grafana -o jsonpath='{.items[0].metadata.name}') 3000:3000
 ```
 
-The dashboard should now be accessible at <http://localhost:3000>.
+The Grafana UI should now be accessible at <http://localhost:3000>.
 
-From here, select the dashboard called "swagger-stats dashboard release".
+From here, select the dashboard called "swagger-stats dashboard".
 
 You should now see live metrics coming from Prometheus!
 
