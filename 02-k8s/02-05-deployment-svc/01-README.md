@@ -2,17 +2,5 @@
 
 ## Prerequisites
 
-- Cluster access
-- Team namespace configured in current `kubectl` context
-
-## Creating and using a namespace (if required)
-
-```bash
-kubectl create ns myapp
-```
-
-Use the newly created namespace as your default namespace:
-
-```bash
-kubectl config set-context --current --namespace=myapp
-```
+- Cluster access ([completed in the `kubectl` setup exercise](../02-01-kubectl/README.md))
+- Team namespace configured in current `kubectl` context ([completed in the namespace exercise](../02-02-ns/README.md))

@@ -123,7 +123,8 @@ kubectl logs pod/dockercoins
 Given this pod has more than one container, you will need to specify which container you want to get the logs from:
 
 ```console
-kubectl logs pod/dockercoins [rng hasher webui worker redis]
+kubectl logs pod/dockercoins --container rng
+kubectl logs pod/dockercoins --container hasher # or webui,worker,redis etc.
 ```
 
 The name of each container is defined in the pod YAML definition.
